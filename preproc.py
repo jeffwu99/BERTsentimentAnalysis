@@ -97,7 +97,7 @@ torch.manual_seed(RANDOM_SEED)
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 
-df = pd.read_json("amazonReviewData/data.json", lines=True)
+df = pd.read_json("data.json", lines=True)
 #df = pd.read_csv("rawReviews.csv")
 #sns.countplot(df.overall)
 
@@ -187,6 +187,8 @@ model = model.to(device)
 input_ids = data['input_ids'].to(device)
 attention_mask = data['attention_mask'].to(device)
 
-# print(input_ids.shape) # batch size x seq length
-# print(attention_mask.shape) # batch size x seq length
+print(input_ids.shape) # batch size x seq length
+print(attention_mask.shape) # batch size x seq length
+
+
 
