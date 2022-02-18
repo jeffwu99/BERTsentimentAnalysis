@@ -1,14 +1,14 @@
 # BERTsentimentAnalysis
 
-Download amazon review data from http://jmcauley.ucsd.edu/data/amazon/
-
-Filter out extraneous data with filterCategories.py <br />
-(optional) Remove stopwords from text with removeStopwords.py
+Download amazon review data from http://jmcauley.ucsd.edu/data/amazon/ <br />
+Process raw data by filtering out extraneous categories and special characters with filterAndBalance.py
 
 
 
 
 
 
-Additional tools: <br />
-checkRatingDistribution.py checks the distribution of ratings
+
+(optional) Additional tools: <br />
+Remove stopwords from text with removeStopwords.py
+
