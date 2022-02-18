@@ -10,5 +10,5 @@ Filter out extraneous data with filterCategories.py <br />
 
 
 
-Additional tools:
+Additional tools: <br />
 checkRatingDistribution.py checks the distribution of ratings
