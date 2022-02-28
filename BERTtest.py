@@ -197,7 +197,8 @@ MAX_LEN = 170 #from distribution of token lengths^
 df_train, df_test = train_test_split(
   df,
   test_size=0.1,
-  random_state=RANDOM_SEED
+  random_state=RANDOM_SEED,
+  stratify = class_names
 )
 
 df_val, df_test = train_test_split(
@@ -241,7 +242,7 @@ attention_mask = data['attention_mask'].to(device)
 # print(input_ids.shape) # batch size x seq length
 # print(attention_mask.shape) # batch size x seq length
 
-EPOCHS = 3
+EPOCHS = 10
 optimizer = AdamW(model.parameters(), lr=2e-5, correct_bias=False)
 total_steps = len(train_data_loader) * EPOCHS
 scheduler = get_linear_schedule_with_warmup(
